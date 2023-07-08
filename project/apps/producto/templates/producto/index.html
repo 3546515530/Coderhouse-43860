@@ -1,6 +1,9 @@
-{% extends 'home/base.html' %}
-{% block TITULO %}
+{% extends 'home/index.html' %}
+{% block INDEX_TITULO %}
     {{aplicacion}}
     <br>
+{% endblock INDEX_TITULO %}
+
+{% block INDEX_CONTENIDO %}
     <a href="{% url 'Home:home' %}"> Ir al menu principal</a>
-{% endblock TITULO %}
+{% endblock INDEX_CONTENIDO %}

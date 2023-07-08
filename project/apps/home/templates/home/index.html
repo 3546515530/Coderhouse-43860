@@ -1,0 +1,30 @@
+{% extends 'home/base.html' %}
+{% block BASE_CONTENIDO %}
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+        <h1 class="pb-lg-3 text-bg-secondary">
+        {% block INDEX_TITULO %}
+            Pagina principal
+        {% endblock INDEX_TITULO %}
+    </div>
+    {% block INDEX_CONTENIDO %}
+
+    <!-- Heading Row-->
+        <div class="row gx-4 gx-lg-5 align-items-center my-5">
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg" alt="..." /></div>
+            <div class="col-lg-5">
+                <h1 class="font-weight-light">La mejor caja de Pandora del mundo</h1>
+                <p>La caja de pandora es un empredimiento innovador unico</p>
+                <a class="btn btn-primary" href="https://wa.me/3546515530" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+    <!-- Content Row-->
+        <div class="row gx-4 gx-lg-5">
+            {% include 'home/card.html' with card="Tarjeta 1" saludo="Hola!"%}
+            {% include 'home/card.html' with card="Tarjeta 2"%}
+            {% include 'home/card.html' with card="Tarjeta 3"%}
+            {% include 'home/card.html' with card="Tarjeta 4"%}
+        </div>
+    
+    {% endblock INDEX_CONTENIDO %}
+
+{% endblock BASE_CONTENIDO %}

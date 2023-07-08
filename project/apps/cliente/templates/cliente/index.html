@@ -1,15 +1,15 @@
-{% extends 'home/base.html' %}
+{% extends 'home/index.html' %}
 
-{% block TITULO %} Clientes {% endblock TITULO %}
+{% block INDEX_TITULO %}
+    Clientes
+{% endblock INDEX_TITULO %}
 
-
-{% block CONTENIDO %}
-    
+{% block INDEX_CONTENIDO %}
     {% for cliente in clientes %}
         <h2>{{cliente.nombre}}</h2>
-        <p>{{cliente.apellido}}</p>
+        <h4>{{cliente.apellido}}</h4>
         <p>{{cliente.nacimiento}}</p>
         <p>{{cliente.pais_origen_id}}</p>
     {% endfor %}
-<a href="{% url 'Home:home' %}">Ir al menu principal</a>
-{% endblock CONTENIDO %}
+    <a href="{% url 'Home:home' %}">Ir al menu principal</a>
+{% endblock INDEX_CONTENIDO %}

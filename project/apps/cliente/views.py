@@ -51,6 +51,6 @@ def busqueda(request):
     contexto={
         "clientes_nombre" : cliente_nombre,
         "clientes_nacimiento" : cliente_nacimiento,
-        "clientes_pais" : cliente_pais
+        "clientes_pais" : cliente_pais,
         }
     return render(request,"cliente/search.html",contexto)
