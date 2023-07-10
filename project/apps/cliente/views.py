@@ -28,10 +28,10 @@ def crear_clientes(request):
     p2.save()
     p3.save()
 
-    c1=Cliente(nombre="Rocio", apellido="Ruiseñor",nacimiento=date(2015,1,1),pais_origen_id=p1,especie="Algarrobo",cantidad=4)
-    c2=Cliente(nombre="Giordana", apellido="Tapelo",nacimiento=date(2005,2,2),pais_origen_id=p2,especie="Paraiso",cantidad=5)
-    c3=Cliente(nombre="Macarena", apellido="Lito",nacimiento=date(1990,1,1),pais_origen_id=p3, especie="Algarrobo",cantidad=15)
-    c4=Cliente(nombre="Anabella", apellido="Perez",nacimiento=date(2005,1,1),pais_origen_id=None,especie="Sauce",cantidad=6)
+    c1=Cliente(nombre="Rocio", apellido="Ruiseñor",nacimiento=date(2015,1,1),pais_origen_id=p1,especie=e1,cantidad=4, email="aa@gmail.com")
+    c2=Cliente(nombre="Gabriela", apellido="Arreguiz",nacimiento=date(2005,2,2),pais_origen_id=p2,especie=e1,cantidad=5, email="bb@gmail.com")
+    c3=Cliente(nombre="Macarena", apellido="Lito",nacimiento=date(1990,1,1),pais_origen_id=p3, especie=e3,cantidad=15, email="cc@gmail.com")
+    c4=Cliente(nombre="Anabella", apellido="Homann",nacimiento=date(2005,1,1),pais_origen_id=None,especie=e2,cantidad=6,email="dd@gmail.com")
     c1.save()
     c2.save()
     c3.save()
@@ -43,7 +43,10 @@ def crear_cliente(request: HttpRequest)-> HttpResponse:
         form=ClienteForm(request.POST) #Guarda lo que cargo el usuario
         if form.is_valid():
             form.save()
+            print("Pedido registrado con exito")
+            print("Te enviamos un correo con el detalle de tu pedido, gracias por ayudarnos!")
             return redirect("cliente:home")
+            
     else: #request.method="GET"
         form=ClienteForm() #Muestra campos para que el usuario cargue datos
 
@@ -57,7 +60,7 @@ def busqueda(request):
     cliente_nacimiento=Cliente.objects.filter(nacimiento__gt=date(2000,1,1))
     
     #Fechas sin pais de origen
-    cliente_pais=Cliente.objects.filter(pais_origen_id=None)
+    cliente_pais=Cliente.objects.filter(pais_destino_id=None)
     
     #Clientes que quieran plantar Algarrobos
     cliente_especie=Cliente.objects.filter(especie="Algarrobo")

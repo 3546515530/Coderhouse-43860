@@ -1,9 +1,68 @@
 {% extends 'home/index.html' %}
 {% block INDEX_TITULO %}
     {{aplicacion}}
+    
+    <div>
+        <h2>Plantamos Arboles por vos.</h2>
+        <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://th.bing.com/th/id/OIP.YHoRT14dK6rwV2cYjpWr7AAAAA?pid=ImgDet&rs=1" alt="..." /></div>
+    </div>
     <br>
 {% endblock INDEX_TITULO %}
 
 {% block INDEX_CONTENIDO %}
+
+
+        <h3>Trabajamos con 3 especies unicas : </p>
+        
+        <h5>Algarrobo</h5>
+            <br>
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://todoarboles.com/wp-content/uploads/2021/08/algarrobo-1024x576.jpg" alt="..." /></div>
+            <br>
+        <h5>Paraiso</h5> 
+            <br>
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://th.bing.com/th/id/OIP.EsVQ37fputa7_WCOZPsU1AHaHa?pid=ImgDet&w=425&h=425&rs=1" alt="..." /></div>
+            <br>
+        <h5>Sauce</h5> 
+            <br>
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://th.bing.com/th/id/R.fe6bbbb3efcde8e48f0782a2201a2106?rik=O2FaBbM7x6htVw&pid=ImgRaw&r=0" alt="..." /></div>
+            <br>
+            
+        <p>¡ Todas generan el mismo beneficio !</p>
+
+        <h3>Beneficios :</h3> 
+        
+        <p>1. Purifica el aire.</p>
+        <p>2. Libera vapor de agua que refresca y humedece.</p>
+        <p>3. Protege y ayuda a evitar la erosión del suelo.</p>
+        <p>4. Es hogar de animales e insectos.  </p>
+        <p>5. Ayuda a reducir la temperatura del suelo, y regenera sus nutrientes.</p>
+        <p>6. Retiene las partículas de polvo del aire.</p>
+        <p>7. Absorbe y reduce el dióxido de carbono de la atmósfera, lo cual ayuda a mitigar el cambio climático.</p>
+        <p>8. Interviene en el ciclo del agua. Por cada árbol que se planta, se garantiza agua para tres personas.</p>
+        <p>9. Retiene agua de lluvia, ayudando a evitar sequías e inundaciones.</p>
+        <p>10. Genera sombra y regulan el calor.</p>
+        <p>11. Plantar reduce el estrés y la ansiedad. También ayuda a la concentración.</p>
+        <p>12. ¡Es una actividad reconfortante que te conecta con la naturaleza y es un hermoso (y valioso) legado para las próximas generaciones! </p>  
+
+        <h2>Plantamos en :</h2> 
+            
+            <p>Argentina
+            <br>
+            Chile
+            <br>
+            Brasil
+            <br>
+            Bolivia
+            <br>
+            Paraguay </h5>
+            <br>
+
+        <h3>¿ Cuantos ?</h3>
+            <p>Plantamos la cantidad que vos prefieras!</p>
+            <p>Los lotes optimos son: 4,5,6 y 15 unidades, ya que estas cantidades son las que permiten una saturacion optima de la parcela en la que serán plantados.</p>
+            <p>Desde que empezamos con esta iniciativa,llevamos 670 unidades plantadas</p>
+
+
     <a href="{% url 'Home:home' %}"> Ir al menu principal</a>
+
 {% endblock INDEX_CONTENIDO %}

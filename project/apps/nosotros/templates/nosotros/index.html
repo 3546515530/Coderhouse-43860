@@ -1,0 +1,48 @@
+{% extends 'home/index.html' %}
+{% block INDEX_TITULO %}
+    {{aplicacion}}
+    
+    <div>
+        <h2>Somos vida verde.</h2>
+        <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://th.bing.com/th/id/OIP.YHoRT14dK6rwV2cYjpWr7AAAAA?pid=ImgDet&rs=1" alt="..." /></div>
+    <div>
+    <br>
+{% endblock INDEX_TITULO %}
+
+{% block INDEX_CONTENIDO %}
+    
+    </div>
+        <br>
+        <h2>Origen</h2>
+        <p>Nacimos en 2025, en la provincia de Cordoba,Argentina</p>
+        <p>Somos estudiantes de la Maestria de Ambiente de la Universidad Catolica de Cordoba</p>
+        <p>Lamentablemente, en Cordoba cada año existen innumerables incendios que arrazan con nuestra vegetacion</p>
+        <p>Como consecuencia,decidimos empreder este proyecto.</p>
+        <br>
+        <br>
+        <p>Desde nuestro nacimiento a hoy, llevamos plantados 670 unidades</p>
+        <p>Una limintante incial, fue que no todos los arboles, son para cualquier entorno</p>
+        <h2>Decidimos escoger 3 especies que pueden desarrolarse en todos los paises en los que trabajamos: </h2>
+        <br>
+        <br>
+        <p>Paraiso</p>
+        <p>Algarrobo</p>
+        <p>Sauce</p>
+        <br>
+    
+    
+        <h2>Precio</h2>
+        <p>Cobramos 100 pesos por Arbol a plantar</p>
+        <p>El precio es el mismo para cualquier especie que elijas</p>
+        <p>Podes pagarnos mediante tarjeta de credito/debito o transferencia</p>
+        <p>No tenemos fines de lucro, solo cobramos por el servicio prestado para garantizar los medios para que nuestros colaboradores puedan comprar las semillas y acudir a la parcela en la que realizaremos la plantacion que desees.</p>
+    
+        <h3>Contacto</h2>
+        <p>Celular: 3546515530 </p>
+        <p>Correo: vida-verde@gmail.com</p>
+        <p>Intagram: Vida-verde.Arg</p>
+    </div>
+        
+    <a href="{% url 'Home:home' %}"> Ir al menu principal</a>
+
+{% endblock INDEX_CONTENIDO %}
