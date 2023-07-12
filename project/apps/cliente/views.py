@@ -77,23 +77,16 @@ def crear_cliente(request: HttpRequest)-> HttpResponse:
 
 def busqueda(request: HttpRequest)-> HttpResponse:
 
+       
 
-        #Busqueda por nobre que contenga "dana"
-        cliente_nombre= Cliente.objects.filter(nombre__contains="dana")
-        
-        #Fechas mayores al 2000
-        cliente_nacimiento=Cliente.objects.filter(nacimiento__gt=date(2000,1,1))
-        
-        #Fechas sin pais de origen
-        cliente_pais=Cliente.objects.filter(pais_destino_id=None)
         
         #Clientes que quieran plantar Algarrobos
-        cliente_arbol=Cliente.objects.filter(especie="Algarrobo")
-
+        cliente_arbol=Cliente.objects.filter(arbol__especie__contains="Algarrobo")
+        
+        #Clientes que quieran plantar Cantidad
+        cliente_arbol=Cliente.objects.filter(arbol__cantidad__contains=15)
+ 
         contexto={ 
-            "clientes_nombre" : cliente_nombre,
-            "clientes_nacimiento" : cliente_nacimiento,
-            "clientes_pais" : cliente_pais,
             "clientes_arbol" : cliente_arbol,
             }
         return render(request,"cliente/search.html",contexto)

@@ -10,8 +10,8 @@
         <h4>{{cliente.apellido}}</h4>
         <p>{{cliente.nacimiento}}</p>
         <p>{{cliente.pais_destino_id}}</p>
-        <p>{{cliente.especie}}</p>
-        <p>{{cliente.cantidad}}</p>
+        <p>{{cliente.arbol.especie}}</p>
+        <p>{{cliente.arbol.cantidad}}</p>
         <p>{{cliente.email}}</p>
     {% endfor %}
     <a href="{% url 'Home:home' %}">Ir al menu principal</a>
