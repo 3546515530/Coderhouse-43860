@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import home,crear_clientes,crear_cliente,busqueda
+from .views import home,crear_cliente,busqueda,crear_clientes
 app_name="cliente"
 
 urlpatterns = [

@@ -21,9 +21,9 @@ def crear_clientes(request):
     e2.save()
     e3.save()
 
-    p1=Pais(nombre="Peru")
-    p2=Pais(nombre="Mexico")
-    p3=Pais(nombre="El salvador")
+    p1=Pais(nombre="Argentina")
+    p2=Pais(nombre="Chile")
+    p3=Pais(nombre="Brasil")
     p1.save()
     p2.save()
     p3.save()
@@ -43,8 +43,6 @@ def crear_cliente(request: HttpRequest)-> HttpResponse:
         form=ClienteForm(request.POST) #Guarda lo que cargo el usuario
         if form.is_valid():
             form.save()
-            print("Pedido registrado con exito")
-            print("Te enviamos un correo con el detalle de tu pedido, gracias por ayudarnos!")
             return redirect("cliente:home")
             
     else: #request.method="GET"
@@ -52,23 +50,25 @@ def crear_cliente(request: HttpRequest)-> HttpResponse:
 
     return render(request,"cliente/crear.html",{"form":form})
 
-def busqueda(request):
-    #Busqueda por nobre que contenga "dana"
-    cliente_nombre= Cliente.objects.filter(nombre__contains="dana")
-    
-    #Fechas mayores al 2000
-    cliente_nacimiento=Cliente.objects.filter(nacimiento__gt=date(2000,1,1))
-    
-    #Fechas sin pais de origen
-    cliente_pais=Cliente.objects.filter(pais_destino_id=None)
-    
-    #Clientes que quieran plantar Algarrobos
-    cliente_especie=Cliente.objects.filter(especie="Algarrobo")
+def busqueda(request: HttpRequest)-> HttpResponse:
 
-    contexto={
-        "clientes_nombre" : cliente_nombre,
-        "clientes_nacimiento" : cliente_nacimiento,
-        "clientes_pais" : cliente_pais,
-        "clientes_especie" : cliente_especie,
-        }
-    return render(request,"cliente/search.html",contexto)
+
+        #Busqueda por nobre que contenga "dana"
+        cliente_nombre= Cliente.objects.filter(nombre__contains="dana")
+        
+        #Fechas mayores al 2000
+        cliente_nacimiento=Cliente.objects.filter(nacimiento__gt=date(2000,1,1))
+        
+        #Fechas sin pais de origen
+        cliente_pais=Cliente.objects.filter(pais_destino_id=None)
+        
+        #Clientes que quieran plantar Algarrobos
+        cliente_arbol=Cliente.objects.filter(especie="Algarrobo")
+
+        contexto={ 
+            "clientes_nombre" : cliente_nombre,
+            "clientes_nacimiento" : cliente_nacimiento,
+            "clientes_pais" : cliente_pais,
+            "clientes_arbol" : cliente_arbol,
+            }
+        return render(request,"cliente/search.html",contexto)
