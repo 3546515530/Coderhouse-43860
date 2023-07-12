@@ -43,15 +43,13 @@ def crear_clientes(request):
     e2.save()
     e3.save()
 
-<<<<<<< HEAD
+
     p1=Pais(nombre="Argentina")
     p2=Pais(nombre="Chile")
     p3=Pais(nombre="Brasil")
     p1.save()
     p2.save()
     p3.save()
-=======
->>>>>>> 915a8d3395a8ce85b190ac19158f89b447093884
 
     c1=Cliente(nombre="Rocio", apellido="Ruiseñor",nacimiento=date(2015,1,1),pais_destino_id=p1,especie=e1,cantidad=4, email="aa@gmail.com")
     c2=Cliente(nombre="Gabriela", apellido="Arreguiz",nacimiento=date(2005,2,2),pais_destino_id=p2,especie=e1,cantidad=5, email="bb@gmail.com")
@@ -63,7 +61,6 @@ def crear_clientes(request):
     c4.save()
     return redirect("cliente:home")
 
-<<<<<<< HEAD
 def crear_cliente(request: HttpRequest)-> HttpResponse:
     if request.method=="POST":
         form=ClienteForm(request.POST) #Guarda lo que cargo el usuario
@@ -75,8 +72,8 @@ def crear_cliente(request: HttpRequest)-> HttpResponse:
         form=ClienteForm() #Muestra campos para que el usuario cargue datos
 
     return render(request,"cliente/crear.html",{"form":form})
-=======
->>>>>>> 915a8d3395a8ce85b190ac19158f89b447093884
+
+
 
 def busqueda(request: HttpRequest)-> HttpResponse:
 
