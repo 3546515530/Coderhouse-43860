@@ -76,17 +76,15 @@ def crear_cliente(request: HttpRequest)-> HttpResponse:
 
 
 def busqueda(request: HttpRequest)-> HttpResponse:
-
        
-
-        
         #Clientes que quieran plantar Algarrobos
-        cliente_arbol=Cliente.objects.filter(arbol__especie__contains="Algarrobo")
+        cliente_arbol_especie=Cliente.objects.filter(arbol__especie__contains="Algarrobo")
         
         #Clientes que quieran plantar Cantidad
-        cliente_arbol=Cliente.objects.filter(arbol__cantidad__contains=15)
+        cliente_arbol_cantidad=Cliente.objects.filter(arbol__cantidad__contains=15)
  
         contexto={ 
-            "clientes_arbol" : cliente_arbol,
+            "clientes_arbol_especie" : cliente_arbol_especie,
+            "clientes_arbol_cantidad" : cliente_arbol_cantidad,
             }
         return render(request,"cliente/search.html",contexto)

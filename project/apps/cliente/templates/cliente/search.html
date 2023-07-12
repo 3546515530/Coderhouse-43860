@@ -4,17 +4,16 @@
 
 {% block CONTENIDO %}
 
-
     <h2>Cliente que desean plantar Algarrobo</h2>
 
-    {% for cliente  in cliente_arbol %}
-        <p>{{cliente}}</p>
+    {% for cliente  in arbol__especie %}
+        <p>{{cliente_arbol_especie}}</p>
     {% endfor %}
 
     <h2>Cliente que desean plantar 15 arboles</h2>
 
-    {% for cliente  in cliente_arbol %}
-        <p>{{cliente}}</p>
+    {% for cliente  in arbol__cantidad %}
+        <p>{{cliente_arbol_cantidad}}</p>
     {% endfor %}
 
 <a href="{% url 'Home:home' %}">Ir al menu principal</a>
