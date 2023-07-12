@@ -42,9 +42,10 @@ La interfez principal : Posee 7 botones distintos:
     Usuario: admin
     Contraseña:1234
 # Errores conocidos
-    No funciona Search
     Eliminar vinculos externos
     Mejorar la interfaz visual
+    No funciona Search
+    No funciona crear cliente desde VSC
 
 
 

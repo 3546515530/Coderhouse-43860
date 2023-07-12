@@ -51,8 +51,8 @@ def crear_clientes(request):
     p2.save()
     p3.save()
 
-    c1=Cliente(nombre="Rocio", apellido="Ruiseñor",nacimiento=date(2015,1,1),pais_destino_id=p1,especie=e1,cantidad=4, email="aa@gmail.com")
-    c2=Cliente(nombre="Gabriela", apellido="Arreguiz",nacimiento=date(2005,2,2),pais_destino_id=p2,especie=e1,cantidad=5, email="bb@gmail.com")
+    c1=Cliente(nombre="Rocio", apellido="Ruiseñor",nacimiento=date(2015,1,1),pais_destino_id=p1,arbol_especie=e1,cantidad=4, email="aa@gmail.com")
+    c2=Cliente(nombre="Gabriela", apellido="Arreguiz",nacimiento=date(2005,2,2),pais_destino_id=p2,arbol_especie=e1,cantidad=5, email="bb@gmail.com")
     c3=Cliente(nombre="Macarena", apellido="Lito",nacimiento=date(1990,1,1),pais_destino_id=p3, especie=e2,cantidad=15, email="cc@gmail.com")
     c4=Cliente(nombre="Anabella", apellido="Homann",nacimiento=date(2005,1,1),pais_destino_id=None,especie=e3,cantidad=6,email="dd@gmail.com")
     c1.save()
