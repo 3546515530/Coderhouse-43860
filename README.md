@@ -42,9 +42,9 @@ La interfez principal : Posee 7 botones distintos:
     Usuario: admin
     Contraseña:1234
 # Errores conocidos
-    Eliminar vinculos externos
-    Mejorar la interfaz visual
-    No muestra ni errores ni informacion para Search
+    Eliminar vinculos externos (deforstacion).
+    Mejorar la interfaz visual de la pagina.
+    No muestra ni errores ni informacion para Search.
 
 
 
