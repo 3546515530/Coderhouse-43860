@@ -44,8 +44,8 @@ La interfez principal : Posee 7 botones distintos:
 # Errores conocidos
     Eliminar vinculos externos
     Mejorar la interfaz visual
-    No funciona Search
-    No funciona crear cliente desde VSC
+    No muestra ni errores ni informacion para Search
+
 
 
 
