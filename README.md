@@ -1,7 +1,6 @@
 # Coderhouse-43860
 # Tercer pre-entrga Greco-Rocio
-
-La pagina que cree se llama Vida Verde, y busca vender el servicio de plantar arboles.
+    La pagina que cree se llama Vida Verde, y busca vender el servicio de plantar arboles.
 # Aplicaciones:
 Conta de 4 aplicaciones:
     cliente:
