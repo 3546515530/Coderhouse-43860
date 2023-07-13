@@ -1,10 +1,10 @@
 {% extends 'home/index.html' %}
+{% load static %}
 {% block INDEX_TITULO %}
     {{aplicacion}}
     
     <div>
-        <h2>Plantamos Arboles por vos.</h2>
-        <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://th.bing.com/th/id/OIP.YHoRT14dK6rwV2cYjpWr7AAAAA?pid=ImgDet&rs=1" alt="..." /></div>
+        <h2>Somos un medio que facilita tu contribucion con el medio ambiente</h2>
     </div>
     <br>
 {% endblock INDEX_TITULO %}
@@ -16,15 +16,15 @@
         
         <h5>Algarrobo</h5>
             <br>
-            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://todoarboles.com/wp-content/uploads/2021/08/algarrobo-1024x576.jpg" alt="..." /></div>
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'home/imagenes/algarrobo.jpg' %}" alt="..." /></div>
             <br>
         <h5>Paraiso</h5> 
             <br>
-            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://th.bing.com/th/id/OIP.EsVQ37fputa7_WCOZPsU1AHaHa?pid=ImgDet&w=425&h=425&rs=1" alt="..." /></div>
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'home/imagenes/paraiso.jpg' %}" alt="..." /></div>
             <br>
         <h5>Sauce</h5> 
             <br>
-            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://th.bing.com/th/id/R.fe6bbbb3efcde8e48f0782a2201a2106?rik=O2FaBbM7x6htVw&pid=ImgRaw&r=0" alt="..." /></div>
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'home/imagenes/sauce.jpg' %}" alt="..." /></div>
             <br>
             
         <p>¡ Todas generan el mismo beneficio !</p>
