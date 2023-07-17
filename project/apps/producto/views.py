@@ -3,12 +3,15 @@ from django.views.generic import ListView, CreateView ,DetailView, UpdateView, D
 from django.urls import reverse_lazy
 from .import models
 from .import forms
+#Importaciones para Login
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 #PAGINA PRINCIPAL
 
-
-# def index(request):
-#     return render (request,"producto/index.html")
+@login_required #Decorador
+def index(request):
+    return render (request,"producto/index.html")
 
 #LIST
 

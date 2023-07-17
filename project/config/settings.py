@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+from django.urls import reverse_lazy
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 #Sirve para generar una clave aleatoria para el projecto
@@ -128,3 +129,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_URL=reverse_lazy("Home:login")
+# LOGIN_REDIRECT_URL=reverse_lazy("Home:index") # Solo se usa si VIEWS no re-direcciona a otra URL

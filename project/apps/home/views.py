@@ -4,9 +4,11 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth import login, logout, authenticate
 from django.http.request import HttpRequest
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 from .import forms
 
 # Create your views here.
+
 def home(request):
     return render (request,"home/index.html")
 
