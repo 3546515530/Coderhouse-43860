@@ -1,0 +1,15 @@
+{% extends 'home/index.html' %}
+
+
+{% block INDEX_TITULO %}
+Login
+{% endblock INDEX_TITULO %}
+</div>
+{% block INDEX_CONTENIDO %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Iniciar sesion</button>
+
+</form>
+{% endblock INDEX_CONTENIDO %}
