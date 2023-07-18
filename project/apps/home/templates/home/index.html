@@ -9,7 +9,20 @@
         {% endblock INDEX_TITULO %}
     </div>
     {% block INDEX_CONTENIDO %}
-        {{ mensaje }}
+        
+        {% if user.is_authenticated %}
+            {{ mensaje }}
+            <h3>Bienvenido {{ user.username }}</h3>
+        {% endif %}
+        {% if user.is_staff %}
+            <div class="row">
+                <a href="{% url 'admin:index' %}"class="btn btn-outline-dark">Panel de administracion</a>
+            </div>  
+            <div class="row">
+                <a href="{% url 'Home:register' %}"class="btn btn-outline-dark">Registrar nvo vendedor</a>
+            </div>
+        {% endif %}
+            
     <!-- Heading Row-->
         <div class="row gx-4 gx-lg-5 align-items-center my-5">
             <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'home/img/R.jpg' %}" alt="..." /></div>
