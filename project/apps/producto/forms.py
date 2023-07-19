@@ -4,3 +4,8 @@ class ProductoCategoriaForm(forms.ModelForm):
     class Meta:
         model=models.ProductoCategoria
         fields="__all__"
+
+class ProductoForm(forms.ModelForm):
+    class Meta:
+        model=models.Producto
+        fields="__all__"

@@ -81,3 +81,28 @@ class ProductoCategoriaUpdate(UpdateView):
 class ProductoCategoriaDelete(DeleteView):
     model=models.ProductoCategoria
     success_url = reverse_lazy("producto:productocategoria_list")
+
+#List
+class ProductoList(ListView):
+    model=models.Producto
+
+#Create
+class ProductoCreate(CreateView):
+    model=models.Producto
+    form_class=forms.ProductoForm
+    succes_url=reverse_lazy("producto:producto_list")
+
+#Detail
+class ProductoDetail(DetailView):
+    model=models.Producto
+    
+#update
+class ProductoUpdate(UpdateView):
+    model=models.Producto
+    form_class=forms.ProductoForm
+    succes_url=reverse_lazy("producto:producto_list")
+
+#Delete
+class ProductoDelete(DeleteView):
+    model=models.Producto
+succes_url=reverse_lazy("producto:producto_list")
