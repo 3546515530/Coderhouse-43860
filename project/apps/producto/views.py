@@ -1,3 +1,5 @@
+from typing import Any
+from django.db.models.query import QuerySet
 from django.shortcuts import render, redirect
 from django.views.generic import ListView, CreateView ,DetailView, UpdateView, DeleteView
 from django.urls import reverse_lazy
@@ -85,6 +87,14 @@ class ProductoCategoriaDelete(DeleteView):
 #List
 class ProductoList(ListView):
     model=models.Producto
+    def get_queryset(self) -> QuerySet[Any]:
+        if self.request.GET.get("consulta"):
+            consulta=self.request.GET.get("consulta")
+            object_list=models.Producto.objects.filter(nombre__icontains=consulta)
+        else:
+            object_list=models.Producto.objects.all()
+        return object_list
+
 
 #Create
 class ProductoCreate(CreateView):

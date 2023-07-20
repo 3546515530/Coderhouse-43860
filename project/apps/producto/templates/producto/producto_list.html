@@ -6,12 +6,16 @@
 
 {% block INDEX_CONTENIDO %}
     {% if object_list %}
+        <div class="py-lg-4">
+            <form action="{% url 'producto:producto_list' %}" method="get"></form>
+            <input type="text" name="consulta" placeholder="Buscar ..." id="">
+        </div>
         {% for object in object_list %}
         <ul>
             <li>{{object.nombre}} $ {{object.precio}}
-            <a href="{% url 'producto:producto_detail' object.id %}">Ver detalle</a>
-            <a href="{% url 'producto:producto_update' object.id %}">Actualizar</a>
-            <a href="{% url 'producto:producto_delete' object.id %}">Eliminar</a>
+            <a href="{% url 'producto:producto_detail' object.id %}"class="btn btn-secondary btn-sm">Ver detalle</a>
+            <a href="{% url 'producto:producto_update' object.id %}"class="btn btn-secondary btn-sm">Actualizar</a>
+            <a href="{% url 'producto:producto_delete' object.id %}"class="btn btn-secondary btn-sm">Eliminar</a>
 
             </li>
         </ul>
@@ -19,7 +23,7 @@
             <p>Hay elementos</p> 
     
     {% else %}
-        <p>No hay elementos</p>  
+        <p class="fs-4 fst-italic ">No hay registros ingresados </p>  
     {% endif %}
 
 
