@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'cliente',
     'producto',
     'home',
+    'venta',
+    
 ]
 
 MIDDLEWARE = [
@@ -130,4 +132,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL=reverse_lazy("Home:login")
-# LOGIN_REDIRECT_URL=reverse_lazy("Home:index") # Solo se usa si VIEWS no re-direcciona a otra URL
+LOGIN_REDIRECT_URL=reverse_lazy("Home:index") # Solo se usa si VIEWS no re-direcciona a otra URL
+MEDIA_URL="/media/"
+MEDIA_ROOT=BASE_DIR/"media"
