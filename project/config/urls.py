@@ -6,6 +6,7 @@ urlpatterns = [
     path("",include("home.urls")),
     path("cliente/",include("cliente.urls")),
     path("producto/",include("producto.urls")),
+    path("venta/",include("venta.urls")),
 ]
 
 from django.conf import settings

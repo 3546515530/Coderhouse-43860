@@ -1,0 +1,31 @@
+
+
+{% load static %}
+{% block INDEX_TITULO %}
+<h1>Scottish</h1>
+{% endblock INDEX_TITULO %}
+
+{% block INDEX_CONTENIDO %}
+<div class="text-center display-1 mb-5 mt-3 ">
+    <div class="col-md-4 mb-5">
+        <div class="card h-100">
+            <div class="card-body">
+                <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'home/img/Sccotish.PNG' %}" alt="..." /></div>
+                <h2 class="card-title">Apariencia</h2>
+                    <h4>Color: De ámbar a castaño oscuro.</h4>
+                    <h4>Claridad: Algo de turbidez es aceptable a bajas temperaturas.</h4>
+                    <h4>Espuma: Corona cremosa de color crudo de tamaño entre bajo y moderado.</h4>
+                <h2 class="card-title">Aroma y sabor</h2>
+                    <h4>Malta: Notas a malta de nivel medio a bajo: pan tostado, bizcocho o galletas inglesas. Toque a caramelo medio-bajo. Toffee aceptable. Las notas a manzana no son imprescindibles pero dan profundidad.</h4>
+                    <h4>Lúpulo: Desde no percibirse a nivel bajo. Siempre con carácter tradicional inglés (terroso, floral, especiado) y en equilibrio con la malta.</h4>
+                    <h4>Amargor percibido: Entre bajo y medio.</h4>
+                <h2 class="card-title">Sensación en boca</h2>
+                    <h4>Cuerpo: Medio-bajo a bajo.</h4>
+                    <h4>Carbonatación: Baja a moderada.</h4>
+                    <h4>Puede tener un paladar que oscile desde relativamente rico y cremoso a seco y granoso.</h4>
+                </div>
+                <a href="{% url 'Home:home' %}" class="btn btn-dark  "> Volver</a>
+            </div>
+        </div>
+                </div>
+{% endblock INDEX_CONTENIDO %}

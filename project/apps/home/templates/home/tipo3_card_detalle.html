@@ -1,0 +1,31 @@
+
+
+{% load static %}
+{% block INDEX_TITULO %}
+<h1>Oatmeal Stout</h1>
+{% endblock INDEX_TITULO %}
+
+{% block INDEX_CONTENIDO %}
+<div class="text-center display-1 mb-5 mt-3 ">
+    <div class="col-md-4 mb-5">
+        <div class="card h-100">
+            <div class="card-body">
+                <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'home/img/Stout.PNG' %}" alt="..." /></div>
+                <h2 class="card-title">Apariencia</h2>
+                    <h4>Color: Desde el marrón rojizo muy oscuro de las versiones más clásicas al negro en los ejemplos actuales.</h4>
+                    <h4>Claridad: Generalmente opaca. Si la claridad es apreciable se acepta turbidez a bajas temperaturas.</h4>
+                    <h4>Espuma: Corona de bien formada de color marrón claro a marrón oscuro. Su persistencia puede ser baja.</h4>
+                <h2 class="card-title">Aroma y sabor</h2>
+                    <h4>Malta: Cerveza rica en sabores maltosos como toffee, caramelo, tostado o pan, que sustenta el resto de matices.</h4>
+                    <h4>Lúpulo: Generalmente bajo, con notas florales, cítricas o herbales.</h4>
+                    <h4>Amargor percibido: Medio a agresivamente alto.</h4>
+                <h2 class="card-title">Sensación en boca</h2>
+                    <h4>Cuerpo: Mucho cuerpo. Cerveza «masticable». Con un paladar aterciopelado y distinguido. El cuerpo y el paladar pueden decaer con el envejecimiento.</h4>
+                    <h4>Carbonatación: Baja a moderada.</h4>
+                    <h4>Puede haber presente algo de tibieza procedente del alcohol como fondo.</h4>
+                </div>
+                <a href="{% url 'Home:home' %}" class="btn btn-dark  "> Volver</a>
+            </div>
+        </div>
+                </div>
+{% endblock INDEX_CONTENIDO %}

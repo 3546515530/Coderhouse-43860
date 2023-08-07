@@ -32,3 +32,7 @@ class Venta(models.Model):
     def save(self, *args, **kwargs):
         self.precio_total = self.producto.precio * self.cantidad
         super().save(*args, **kwargs)
+    
+    def __str__(self):
+        return f"{self.vendedor}|{self.producto}|${self.precio_total}"
+

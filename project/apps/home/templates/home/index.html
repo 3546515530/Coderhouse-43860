@@ -25,20 +25,19 @@
             
     <!-- Heading Row-->
         <div class="row gx-4 gx-lg-5 align-items-center my-5">
-            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'home/img/R.jpg' %}" alt="..." /></div>
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'home/img/TOSKA.PNG' %}" alt="..." /></div>
             <div class="col-lg-5">
-                <h1 class="font-weight-light">La mejor caja de Pandora del mundo</h1>
-                <p>La caja de pandora es un empredimiento innovador unico</p>
-                <a class="btn btn-primary" href="https://wa.me/3546515530" target="_blank">WhatsApp</a>
+                <h1 class="font-weight-light">La cerveza más TOSKA</h1>
+                <p>TOSKA es un startup relativamente nuevo.</p>
+                <p>Nos dedicamos a la produccion y venta de cerveza artesanal</p>
+                <p>Producimos la mejor birra de Cordoba</p>
+                <a class="btn btn-dark " href="https://wa.me/3546515530" target="_blank">WhatsApp</a>
             </div>
         </div>
     <!-- Content Row-->
-        <div class="row gx-4 gx-lg-5">
-            {% include 'home/card.html' with card="Tarjeta 1" saludo="Hola!"%}
-            {% include 'home/card.html' with card="Tarjeta 2"%}
-            {% include 'home/card.html' with card="Tarjeta 3"%}
-            {% include 'home/card.html' with card="Tarjeta 4"%}
-        </div>
+    <div class="row gx-4 gx-lg-5">
+        {% include 'home/card.html' with card="Estilos"%}
+    </div>
     
     {% endblock INDEX_CONTENIDO %}
 

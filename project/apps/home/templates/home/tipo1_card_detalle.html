@@ -1,0 +1,31 @@
+
+
+{% load static %}
+{% block INDEX_TITULO %}
+<h1>Blonde Ale</h1>
+{% endblock INDEX_TITULO %}
+
+{% block INDEX_CONTENIDO %}
+<div class="text-center display-1 mb-5 mt-3 ">
+    <div class="col-md-4 mb-5">
+        <div class="card h-100">
+            <div class="card-body">
+                <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'home/img/Blonde_Ale.PNG' %}" alt="..." /></div>
+                <h2 class="card-title">Apariencia</h2>
+                    <h4>Color: De amarillo intenso a dorado intenso.</h4>
+                    <h4>Claridad: Generalmente muy clara.</h4>
+                    <h4>Espuma: Abundante, blanca, cremosa y persistente.</h4>
+                <h2 class="card-title">Aroma y sabor</h2>
+                    <h4>Espuma: Abundante, blanca, cremosa y persistente.</h4>
+                    <h4>Lúpulo: En el aroma las notas a lúpulo son opcionales (terrosas o espaciadas). Si hay sabor a lúpulo tan sólo complementa al perfil fermentativo.</h4>
+                    <h4>Amargor percibido: Amargor medio, siempre con dominio de la malta.</h4>
+                <h2 class="card-title">Sensación en boca</h2>
+                    <h4>Cuerpo: Medio.</h4>
+                    <h4>Carbonatación: Entre medio-alta y alta. Efervescente.</h4>
+                    <h4>Paladar suave, a veces incluso cremoso. Final de medio a seco. Retrogrusto a malta. Puede haber una ligera tibieza por el alcohol, pero siempre suave.</h4>
+                </div>
+                <a href="{% url 'Home:home' %}" class="btn btn-dark  "> Volver</a>
+            </div>
+        </div>
+                </div>
+{% endblock INDEX_CONTENIDO %}

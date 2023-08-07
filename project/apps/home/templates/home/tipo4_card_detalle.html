@@ -1,0 +1,32 @@
+
+
+{% load static %}
+{% block INDEX_TITULO %}
+<h1>American Pale Ale</h1>
+
+{% endblock INDEX_TITULO %}
+
+{% block INDEX_CONTENIDO %}
+<div class="text-center display-1 mb-5 mt-3 ">
+    <div class="col-md-4 mb-5">
+        <div class="card h-100">
+            <div class="card-body">
+                <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'home/img/Apa.PNG' %}" alt="..." /></div>
+                <h2 class="card-title">Apariencia</h2>
+                    <h4>Color: Dorado a ámbar.</h4>
+                    <h4>Claridad: Cerveza clara.</h4>
+                    <h4>Espuma: Corona de tamaño medio a grande, con buena retención de color blanco a blanco roto.</h4>
+                <h2 class="card-title">Aroma y sabor</h2>
+                    <h4>Malta: Aroma de intensidad baja a media. Neutral en cualquier caso. Pueden percibirse las maltas especiales (pan, tostada, galleta…). Sabor en consonancia con el aroma. En cualquier caso la malta es sólo un soporte para el lúpulo.</h4>
+                    <h4>Lúpulo: Cerveza equilibrada, si bien, tendente al lúpulo americano. Amplio rango de notas (floral, afrutado, tropical, especiado, pináceo…). Sabor en consonancia con el aroma.</h4>
+                    <h4>Amargor percibido: Medio. Perceptible especialmente al final. Nunca áspero.</h4>
+                <h2 class="card-title">Sensación en boca</h2>
+                    <h4>Cuerpo: Ligero a medio.</h4>
+                    <h4>Carbonatación: Entre media y alta.</h4>
+                    <h4>Paladar redondo y suave. Sin astringencia ni aspereza del lúpulo. Final seco.</h4>
+                </div>
+                <a href="{% url 'Home:home' %}" class="btn btn-dark  "> Volver</a>
+            </div>
+        </div>
+                </div>
+{% endblock INDEX_CONTENIDO %}

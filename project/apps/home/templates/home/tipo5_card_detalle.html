@@ -1,0 +1,31 @@
+
+
+{% load static %}
+{% block INDEX_TITULO %}
+<h1>American IPA</h1>
+{% endblock INDEX_TITULO %}
+
+{% block INDEX_CONTENIDO %}
+<div class="text-center display-1 mb-5 mt-3 ">
+    <div class="col-md-4 mb-5">
+        <div class="card h-100">
+            <div class="card-body">
+                <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'home/img/Ipa.PNG' %}" alt="..." /></div>
+                <h2 class="card-title">Apariencia</h2>
+                    <h4>Color: Dorado a cobrizo.</h4>
+                    <h4>Claridad: Cerveza clara, si bien la turbidez es aceptable, especialmente a bajas temperaturas.</h4>
+                    <h4>Espuma: Corona de tamaño medio, persistente de color blanco a blanco roto.</h4>
+                <h2 class="card-title">Aroma y sabor</h2>
+                    <h4>Malta: Notas de intensidad media-baja a media están presentes en el aroma y el sabor.</h4>
+                    <h4>Lúpulo: Esta es una de las claves. La percepción del lúpulo de alto a muy alto con una amplia gama de atributos, entre ellos ﬂoral, a pino, cítrico, afrutado (bayas, tropical, fruta de hueso y otros), etc.</h4>
+                    <h4>Amargor percibido: Medio-alto a muy alt</h4>
+                <h2 class="card-title">Sensación en boca</h2>
+                    <h4>Cuerpo: Medio-bajo a medio.</h4>
+                    <h4>Carbonatación: Media a medio-alta.</h4>
+                    <h4>Sin astringencia ni aspereza del lúpulo. Algo de tibieza procedente del alcohol es aceptable.</h4>
+                </div>
+                <a href="{% url 'Home:home' %}" class="btn btn-dark  "> Volver</a>
+            </div>
+        </div>
+                </div>
+{% endblock INDEX_CONTENIDO %}

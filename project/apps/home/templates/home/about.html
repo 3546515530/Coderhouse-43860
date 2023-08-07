@@ -1,11 +1,53 @@
 {% extends 'home/index.html' %}
+{% load static %}
 
 {% block INDEX_TITULO %}
-    Sobre nosotros
+    Sobre TOSKA
 {% endblock INDEX_TITULO %}
 
 {% block INDEX_CONTENIDO %}
-<div class="text-center display-1 mb-5 mt-3 ">
-    Somos un equipo de desarrollo Python
-</div>
+    <div>
+        <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'home/img/Etiqueta.PNG' %}" alt="..." /></div>
+            <br>
+        <div class="card-body">
+            <h2 class="card-title">Origen</h2>
+            <br>
+                <p class="card-subtitle ">Nacimos en 2019</p>
+                <p class="card-subtitle ">Nos dedicamos a la produccion y comercializaicon de cerveza artesanal</p>
+                <p class="card-subtitle ">Producimos en Cordoba, Villa Rumipal - CD : 5864 / Barrio Parque el Corcovado.</p>
+            <br>
+            <a class="btn btn-dark " href="https://www.google.com.ar/maps/dir//Toska+Cervecer%C3%ADa+-+F%C3%A1brica,+Av.+De+La+Hoster%C3%ADa+S%2FN,+XAG,+X5197+Villa+Rumipal/@-32.5604357,-70.6053748,7z/data=!4m18!1m8!3m7!1s0x95d2a35931ad6467:0xe94e2a8558db8265!2sToska+Cervecer%C3%ADa+-+F%C3%A1brica!8m2!3d-32.1425674!4d-64.5015804!15sCg5jZXJ2ZXJpYSB0b3NrYZIBDG1hbnVmYWN0dXJlcuABAA!16s%2Fg%2F11glgmzb9h!4m8!1m0!1m5!1m1!1s0x95d2a35931ad6467:0xe94e2a8558db8265!2m2!1d-64.5015717!2d-32.1425795!3e2?entry=ttu">Visitanos</a></div>
+\
+            <h2 class="card-title">Productos</h2>
+            <br>
+                <p class="card-subtitle ">Trabajamos con cinco estilos distintos:</p>
+                <br> 
+                <p class="card-subtitle ">Blonde Ale</p>
+                <p class="card-subtitle ">Sccotish</p>
+                <p class="card-subtitle ">Oatmel Stout</p>
+                <p class="card-subtitle ">Apa</p>
+                <p class="card-subtitle ">Ipa</p>
+            <br>
+
+            <h2 class="card-title">Precio</h2>
+            <br> 
+            <p class="card-subtitle ">Nuestros precios varian dependiendo tanto del producto desees como la presentacion.</p>
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'home/img/Precio.PNG' %}" alt="..." /></div>
+            <br>
+>
+            <h2 class="card-title">Contacto</h2>
+            <p class="card-subtitle ">Podes contactarnos por distintos medios</p>
+            <br> 
+            <p class="card-subtitle ">Emial : toskacervecería@gail.com</p>
+            <p class="card-subtitle ">Telefono : 3546515530</p>
+            <p class="col-lg-1"><img class="img-fluid rounded mb-1 mb-lg-1" style="height: 30px;" src="{% static 'home/img/Whatsapp.PNG' %}" alt=""/>
+            <p class="btn btn-dark " href="https://wa.me/3546515530" target="_blank">WhatsApp</p>
+
+            <p class="card-subtitle ">Instagram : Toska Cerveza</p>
+            <p class="col-lg-1"><img class="img-fluid rounded mb-1 mb-lg-1" style="height: 30px;" src="{% static 'home/img/Instagram.PNG' %}" alt=""/>
+            <p class=" btn btn-dark " href="https://www.instagram.com/toskacerveza/">Instagram</p>
+            <br>
+            <br>
+        </div>
+    </div>
 {% endblock INDEX_CONTENIDO %}

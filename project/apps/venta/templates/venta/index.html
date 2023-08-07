@@ -1,34 +1,34 @@
 {% extends 'home/index.html' %}
 {% block INDEX_TITULO %}
-    Productos
+    Ventas
     <br>
 {% endblock INDEX_TITULO %}
 
 {% block INDEX_CONTENIDO %}
 
     <h3 class="pb-lg-3 ">
-        Categoría de productos
+        Vendedores
     </h3>
 
     <div class="d-grid gap-3">
     {% if user.is_staff %}
-        <a href="{% url 'producto:productocategoria_create' %}" class="btn btn-dark  "> Crear Categorias de Productos </a>
+        <a href="{% url 'venta:vendedor_create' %}" class="btn btn-primary "> Crear Vendedores </a>
     {% endif %}
         <br>
-        <a href="{% url 'producto:productocategoria_list' %}" class="btn btn-dark "> Listar Categorias de Productos </a>
+        <a href="{% url 'venta:vendedor_list' %}" class="btn btn-primary "> Listar Vendedores </a>
         <br>
     </div>
 
     <h3 class="pb-lg-3 ">
-        Productos
+        Ventas
     </h3>
 
     <div class="d-grid gap-3">
         {% if user.is_staff %}
-            <a href="{% url 'producto:producto_create' %}" class="btn btn-dark  "> Crear Productos </a>
+            <a href="{% url 'venta:venta_create' %}" class="btn btn-primary "> Crear Ventas </a>
         {% endif %}
             <br>
-            <a href="{% url 'producto:producto_list' %}" class="btn btn-dark  "> Listar Productos </a>
+            <a href="{% url 'venta:venta_list' %}" class="btn btn-primary "> Listar Ventas </a>
             <br>
         </div>
         

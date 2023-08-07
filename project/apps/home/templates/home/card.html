@@ -1,9 +1,57 @@
-<div class="col-md-4 mb-5">
+<div class="col-md-40 mb-3">
     <div class="card h-100">
         <div class="card-body">
-            <h2 class="card-title">{{ card }}{{ saludo }}</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+            <h2 class="card-title">Blonde Ale</h2>
+            <p class="card-subtitle ">Color: De amarillo intenso a dorado intenso.</p>
+            <br> 
+            <p class="card-subtitle ">Claridad: Generalmente muy clara.</p>
+            <br>
+            <p class="card-subtitle ">Espuma: Abundante, blanca, cremosa y persistente.</p>
         </div>
-        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Más informacion</a></div>
+        <div class="card-footer"><a class="btn btn-dark btn-sm" href="{% url 'Home:tipo1_card_detalle' %}">Ampliar</a></div>
+    </div>
+</div>
+<div class="col-md-40 mb-3">
+    <div class="card h-100">
+        <div class="card-body">
+            <h2 class="card-title">Scottish</h2>
+            <p class="card-subtitle ">Color: De ámbar a castaño oscuro.</p>
+            <br> 
+            <p class="card-subtitle ">Claridad: Algo de turbidez es aceptable a bajas temperaturas.</p>
+            <br>
+            <p class="card-subtitle ">Espuma: Corona cremosa de color crudo de tamaño entre bajo y moderado.</p>
+        </div>
+        <div class="card-footer"><a class="btn btn-dark  btn-sm" href="{% url 'Home:tipo2_card_detalle' %}">Ampliar</a></div>
+    </div>
+</div>
+<div class="col-md-40 mb-3">
+    <div class="card h-100">
+        <div class="card-body">
+            <h2 class="card-title">Oatmeal Stout</h2>
+            <p class="card-subtitle ">Color: Desde el marrón rojizo muy oscuro de las versiones más clásicas al negro en los ejemplos actuales.</p>
+            <br>
+            <p class="card-subtitle ">Claridad: Generalmente opaca. Si la claridad es apreciable se acepta turbidez a bajas temperaturas.</p>
+            <br>
+            <p class="card-subtitle ">Espuma: Corona de bien formada de color marrón claro a marrón oscuro. Su persistencia puede ser baja.</p>
+        </div>
+        <div class="card-footer"><a class="btn btn-dark  btn-sm" href="{% url 'Home:tipo3_card_detalle' %}">Ampliar</a></div>
+    </div>
+</div>
+<div class="col-md-40 mb-3">
+    <div class="card h-100">
+        <div class="card-body">
+            <h2 class="card-title">APA</h2>
+            <p class="card-text">Árbol de la familia de las salicáceas, que crece hasta 20 metro(s) de altura, con tronco grueso, derecho, de muchas ramas y ramillas péndulas. Tiene copa irregular, estrecha y clara, hojas angostas, lanceoladas, de margen poco aserrado, verdes por el haz y blancas y algo pelosas por el envés, flores sin cáliz ni corola, en amentos verdosos, y fruto capsular. Es común en las orillas de los ríos.</p>
+        </div>
+        <div class="card-footer"><a class="btn btn-dark  btn-sm" href="{% url 'Home:tipo4_card_detalle' %}">Ampliar</a></div>
+    </div>
+</div>
+<div class="col-md-40 mb-3">
+    <div class="card h-100">
+        <div class="card-body">
+            <h2 class="card-title">IPA</h2>
+            <p class="card-text">Árbol de la familia de las salicáceas, que crece hasta 20 metro(s) de altura, con tronco grueso, derecho, de muchas ramas y ramillas péndulas. Tiene copa irregular, estrecha y clara, hojas angostas, lanceoladas, de margen poco aserrado, verdes por el haz y blancas y algo pelosas por el envés, flores sin cáliz ni corola, en amentos verdosos, y fruto capsular. Es común en las orillas de los ríos.</p>
+        </div>
+        <div class="card-footer"><a class="btn btn-dark  btn-sm" href="{% url 'Home:tipo5_card_detalle' %}">Ampliar</a></div>
     </div>
 </div>

@@ -6,12 +6,16 @@
 
 {% block INDEX_CONTENIDO %}
     {% if object_list %}
+    <div class="py-lg-4">
+        <form action="{% url 'producto:productocategoria_list' %}" method="get"></form>
+        <input type="text" name="consulta" placeholder="Buscar ..." id="">
+    </div>
         {% for object in object_list %}
         <ul>
             <li>{{object.nombre}}
-            <a href="{% url 'producto:productocategoria_detail' object.id %}">Ver detalle</a>
-            <a href="{% url 'producto:productocategoria_update' object.id %}">Actualizar</a>
-            <a href="{% url 'producto:productocategoria_delete' object.id %}">Eliminar</a>
+            <a href="{% url 'producto:productocategoria_detail' object.id %}" class="btn btn-secondary btn-sm">Ver detalle</a>
+            <a href="{% url 'producto:productocategoria_update' object.id %}" class="btn btn-primary btn-sm">Actualizar</a>
+            <a href="{% url 'producto:productocategoria_delete' object.id %}" class="btn btn-danger btn-sm">Eliminar</a>
 
             </li>
         </ul>
